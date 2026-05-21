@@ -1,0 +1,38 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Audit {
+  id             String   @id @default(cuid())
+  slug           String   @unique
+  teamSize       Int
+  primaryUseCase String
+  tools          Json
+  result         Json
+  summary        String
+  email          String?
+  company        String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@index([createdAt])
+}
+
+model Lead {
+  id        String   @id @default(cuid())
+  auditId   String?
+  email     String
+  company   String?
+  role      String?
+  intent    String?
+  source    String   @default("audit")
+  createdAt DateTime @default(now())
+
+  @@index([email])
+  @@index([createdAt])
+}
