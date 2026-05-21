@@ -1,14 +1,14 @@
 import { z } from "zod";
 
 export const aiTools = [
-  "ChatGPT",
-  "Claude",
-  "GitHub Copilot",
   "Cursor",
-  "Perplexity",
-  "Notion AI",
-  "Jasper",
-  "Midjourney",
+  "GitHub Copilot",
+  "Claude",
+  "ChatGPT",
+  "Anthropic API direct",
+  "OpenAI API direct",
+  "Gemini",
+  "Windsurf",
   "Other"
 ] as const;
 

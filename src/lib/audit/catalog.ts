@@ -20,7 +20,7 @@ export const toolBenchmarks: Record<string, ToolBenchmark> = {
     canonical: "Claude",
     category: "assistant",
     starterMonthlyPerSeat: 20,
-    teamMonthlyPerSeat: 30,
+    teamMonthlyPerSeat: 25,
     enterpriseThresholdSeats: 50,
     notes: "Comparable seat economics to ChatGPT for general knowledge work."
   },
@@ -40,37 +40,37 @@ export const toolBenchmarks: Record<string, ToolBenchmark> = {
     enterpriseThresholdSeats: 35,
     notes: "Best fit for active coding users; duplicative with Copilot for some teams."
   },
-  Perplexity: {
-    canonical: "Perplexity",
-    category: "research",
+  "Anthropic API direct": {
+    canonical: "Anthropic API direct",
+    category: "assistant",
+    starterMonthlyPerSeat: 10,
+    teamMonthlyPerSeat: 10,
+    enterpriseThresholdSeats: 500,
+    notes: "API access is billed on usage, not seats. Highly cost-effective for technical teams building internal tools."
+  },
+  "OpenAI API direct": {
+    canonical: "OpenAI API direct",
+    category: "assistant",
+    starterMonthlyPerSeat: 10,
+    teamMonthlyPerSeat: 10,
+    enterpriseThresholdSeats: 500,
+    notes: "API access is billed on usage. Often 80% cheaper than ChatGPT Enterprise for developers."
+  },
+  Gemini: {
+    canonical: "Gemini",
+    category: "assistant",
+    starterMonthlyPerSeat: 0,
+    teamMonthlyPerSeat: 0,
+    enterpriseThresholdSeats: 50,
+    notes: "Gemini AI is now bundled directly into Google Workspace Business and Enterprise plans at no extra cost. Individual Google One plans are $20."
+  },
+  Windsurf: {
+    canonical: "Windsurf",
+    category: "coding",
     starterMonthlyPerSeat: 20,
     teamMonthlyPerSeat: 40,
     enterpriseThresholdSeats: 50,
-    notes: "Useful for research-heavy teams; often redundant for low-research workflows."
-  },
-  "Notion AI": {
-    canonical: "Notion AI",
-    category: "productivity",
-    starterMonthlyPerSeat: 10,
-    teamMonthlyPerSeat: 10,
-    enterpriseThresholdSeats: 100,
-    notes: "Works best when most company knowledge already lives in Notion."
-  },
-  Jasper: {
-    canonical: "Jasper",
-    category: "writing",
-    starterMonthlyPerSeat: 49,
-    teamMonthlyPerSeat: 69,
-    enterpriseThresholdSeats: 25,
-    notes: "Harder to justify for teams without a dedicated content workflow."
-  },
-  Midjourney: {
-    canonical: "Midjourney",
-    category: "design",
-    starterMonthlyPerSeat: 10,
-    teamMonthlyPerSeat: 30,
-    enterpriseThresholdSeats: 20,
-    notes: "Best for frequent visual generation; occasional use can stay on lower tiers."
+    notes: "Emerging coding assistant. Now quota-based instead of credit-based. Assess overlap with Copilot or Cursor."
   },
   Other: {
     canonical: "Other",

@@ -22,6 +22,23 @@ Credex can use this as a lead-generation wedge: give founders a useful audit fir
 - Vitest coverage for core audit logic
 - GitHub Actions CI
 
+## Decisions (5 Key Trade-offs)
+
+1. **Deterministic Engine vs. AI-driven Engine:** I chose to hardcode the financial logic in TypeScript rather than passing the raw data to an LLM. Trade-off: It required maintaining `catalog.ts`, but it ensures the outputs are 100% testable, consistent, and defensible to finance teams. AI is only used to format the summary paragraph.
+2. **Dashboard UI vs. Marketing Landing Page:** I pivoted the design midway from a standard marketing page to a "Functional Web App Dashboard". Trade-off: It took more time to build robust layouts, but it establishes immediate B2B trust by looking like a premium internal tool (like Linear/Vercel) rather than a lead-gen trap.
+3. **Modular Monolith vs. Microservices:** I chose a Next.js App Router monolith over a separate React SPA + Node.js API. Trade-off: Slightly tighter coupling between frontend and backend, but vastly superior shipping speed and simplified deployment for a 7-day sprint.
+4. **Upstash Redis vs. Next.js Rate Limiting:** I used Upstash Redis over Next.js's experimental rate limiters or an in-memory map. Trade-off: Added an external dependency, but it guarantees rate-limiting survives serverless cold starts on Vercel without wiping the cache.
+5. **Client-side CSV Export vs. Server-side PDF Generation:** I opted for a simple client-side Blob generation for CSVs instead of a heavy server-side PDF generator (like Puppeteer). Trade-off: Less visually impressive than a branded PDF, but provides immediate utility for ops teams who just want the data in Excel, while keeping the server lightweight.
+
+## Deployment & Demo
+
+- **Live URL:** [Insert Vercel URL Here]
+- **Demo Video:** [Insert YouTube/Loom Link Here]
+
+### Screenshots
+*(Add 3+ screenshots of the dashboard, mobile view, and shareable report here)*
+
+
 ## Stack
 
 - Next.js App Router
