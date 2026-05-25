@@ -17,8 +17,6 @@ He cared way more about "unused seats" than "finding cheaper tools". He assumed 
 ### What it changed about the design
 I completely changed the audit engine logic to prioritize "unused seats" and "downgrading overkill plans" as the highest-confidence recommendations, and gave "alternative tool suggestions" a lower confidence score because of migration friction.
 
----
-
 ## Interview 2: "M.T.", Seed Founder
 - **Role:** Solo Technical Founder
 - **Company Stage:** Seed (~5 employees)
@@ -33,17 +31,6 @@ The outright rejection of the initial landing page design. He equated "marketing
 
 ### What it changed about the design
 This was the primary driver for the mid-week UI pivot. I completely scrapped the marketing-style landing page and built a "Functional Web App Dashboard" (similar to Linear or Vercel's dashboards) to signal data density, seriousness, and engineering quality.
-
----
-
-## Interview 3: "A.R.", Operations Lead
-- **Role:** VP of Operations
-- **Company Stage:** Series B (~120 employees)
-
-### Quotes
-1. *"The problem isn't knowing what we spend, the problem is convincing department heads to cut it. I need something I can screenshot and put in a Slack channel."*
-2. *"If an AI tells me we should cut something, I'll assume it's hallucinating. If a spreadsheet tells me, I'll believe it."*
-3. *"We're paying for Enterprise tiers mostly for SOC2 compliance, not because we need the extra features."*
 
 ### Most Surprising Thing
 The absolute demand for deterministic math. She did not want an LLM guessing at her financials.
